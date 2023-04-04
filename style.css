@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+
+:root {
+
+  /* Primary Colours */
+  --clr-light-red: hsl(0, 100%, 67%);
+  --clr-orangy-yellow: hsl(39, 100%, 56%);
+  --clr-green-teal: hsl(166, 100%, 37%);
+  --clr-cobalt-blue: hsl(234, 85%, 45%);
+  --clr-light-red-light: hsla(0, 100%, 67%, 0.05);
+  --clr-orangy-yellow-light: hsla(39, 100%, 56%, 0.05);
+  --clr-green-teal-light: hsla(166, 100%, 37%, 0.05);
+  --clr-cobalt-blue-light: hsla(234, 85%, 45%, 0.05);
+
+  /* Gradient Colours */
+  --clr-light-slate-blue: hsl(252, 100%, 67%);
+  --clr-light-royal-blue: hsl(241, 81%, 54%);
+  --clr-violet-blue: hsla(256, 72%, 46%, 0.9);
+  --clr-persian-blue: hsla(241, 72%, 46%, 0.95);
+
+  /* Neutral Colours */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-pale-blue: hsl(221, 100%, 96%);
+  --clr-light-lavender: hsl(241, 100%, 89%);
+  --clr-dark-grey-blue: hsl(224, 30%, 27%);
+  --clr-dark-grey-blue-light: hsla(224, 30%, 27%, 0.5);
+
+  /* Gradients */
+  --grad-light: linear-gradient(180deg, var(--clr-light-slate-blue) 0%, var(--clr-light-royal-blue) 100%);
+  --grad-dark: linear-gradient(180deg, var(--clr-violet-blue) 0%, var(--clr-persian-blue) 100%);
+  --grad-dark-invert: linear-gradient(0, var(--clr-violet-blue) 0%, var(--clr-persian-blue) 100%);
+
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.card {
+  border-radius: 32px;
+  width: 650px;
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Left Card */
+.result {
+  width: 50%;
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  background: linear-gradient(var(--clr-light-slate-blue), var(--clr-light-royal-blue));
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.result h1 {
+  color: var(--clr-light-lavender);
+  margin-bottom: 1rem;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.circle h1 {
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 4rem;
+}
+
+.circle p {
+  margin-top: -0.55rem;
+  color: var(--clr-light-lavender);
+  width: 200px;
+}
+
+.result strong {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.result p {
+  color: var(--clr-light-lavender);
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+/* Right Card */
+.summary {
+  width: 50%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.summary h3 {
+  color: black;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  justify-content: space-between;
+  padding: 1rem .5rem;
+}
+
+.total {
+  color: gray;
+}
+.total strong{
+  color: black;
+}
+
+.category:nth-child(1) {
+  background-color: var(--clr-light-red-light);
+}
+
+.category:nth-child(1) h4 {
+  color: var(--clr-light-red);
+}
+
+.category:nth-child(2) {
+  background-color: var(--clr-orangy-yellow-light);
+}
+
+.category:nth-child(2) h4 {
+  color: var(--clr-orangy-yellow);
+}
+
+.category:nth-child(3) {
+  background-color: var(--clr-green-teal-light);
+}
+
+.category:nth-child(3) h4 {
+  color: var(--clr-green-teal);
+}
+
+.category:nth-child(4) {
+  background-color: var(--clr-cobalt-blue-light);
+}
+
+.category:nth-child(4) h4 {
+  color: var(--clr-cobalt-blue);
+}
+
+.categories button{
+  background-color: var(--clr-dark-grey-blue);
+  color: white;
+  border-radius: 50px;
+  height: 40px;
+  margin-top: 15px;
+}
+.categories button:hover{
+  background:linear-gradient(var(--clr-violet-blue),var(--clr-persian-blue)); ;
+}
+
+@media (max-width: 650px) {
+  .body {
+    align-items: flex-start;
+    background-color: #fff;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .result {
+    border-radius: 0 0 1rem 1rem;
+    width: 100%;
+  }
+
+  .result h1 {
+    width: 250px;
+  }
+
+  .summary {
+    width: 100%;
+  }
+}
